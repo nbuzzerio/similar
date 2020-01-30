@@ -1,0 +1,27 @@
+{
+  "name": "similar",
+  "version": "1.0.0",
+  "description": "Similar Breeds Component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --inspect index.js",
+    "seed": "node ./dbHelpers/seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sagittarius-HR/similar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sagittarius-HR/similar/issues"
+  },
+  "homepage": "https://github.com/Sagittarius-HR/similar#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.9",
+    "nodemon": "^2.0.2"
+  }
+}
