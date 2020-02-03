@@ -7,6 +7,9 @@ const db = require('./dbHelpers/db.js');
 
 const jsonParser = bodyParser.json();
 
+app.use(express.static('client'));
+app.use('/', express.static('client', {index: "./dist/index.html"}));
+
 app.get('/url/:dogId', function(req, res) {
   db.get(req.params.dogId, function(err, url) {
     if (err) throw new Error(err);

@@ -103,7 +103,6 @@ var seedFiles =
 'philippe-jausions-xGMDFLm0CIE-unsplash.jpg',
 'pietro-ascanio-guarino-W-QZlNFsvng-unsplash.jpg',
 'pratiksha-mohanty-5_SfdvMDpD8-unsplash.jpg',
-'printit',
 'rhaul-v-alva-jCM48W7y6Y8-unsplash.jpg',
 'rodolfo-sanches-carvalho-6yOg6cEHmgs-unsplash.jpg',
 'ryan-stone-FTzRYeD5lAs-unsplash.jpg',
