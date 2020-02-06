@@ -37,3 +37,4 @@ var get = function(id, callback) {
 
 module.exports.save = save;
 module.exports.get = get;
+module.exports.db = db;

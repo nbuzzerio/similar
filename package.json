@@ -4,9 +4,9 @@
   "description": "Similar Breeds Component",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --detectOpenHandles",
     "start": "nodemon --inspect index.js",
-    "seed": "node ./dbHelpers/seed.js",
+    "seed": "node ./dbHelpers/seedRunner.js",
     "compile": "webpack"
   },
   "repository": {
@@ -36,5 +36,8 @@
   },
   "devDependencies": {
     "webpack-cli": "^3.3.10"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
