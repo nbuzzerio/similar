@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script></script>
+    <head>
+      <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+      <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+      <style>
+        .dogImage {
+          height: 200px;
+          width: 500px;
+          object-fit: contain;
+        }
+      </style>
     </head>
     <body>
       <h2>Similar Things</h2>
       <div id="similarContainer"></div>
       <script src="/dist/main.js"></script>
+      <script>
+        ReactDOM.render(
+          React.createElement(App),
+          document.getElementById('similarContainer')
+        );
+      </script>
     </body>
 </html>

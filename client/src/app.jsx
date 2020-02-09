@@ -1,40 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import $ from 'jquery';
+const React = require('react');
+const ReactDOM = require('react-dom');
+const $ = require('jquery');
+const Dog = require('./components/dog.jsx').default;
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {url:'', name:''};
-
-    this.setUrl = this.setUrl.bind(this);
-
-    this.setUrl();
-  }
-
-  setUrl() {
-    var that = this;
-    $.ajax({
-      method:'GET',
-      url: 'http://localhost:3001/url/' + that.props.id
-    }).done(function(data){
-      that.setState({
-        url: data,
-        name: 'Dog'
-      })
-    })
   }
 
   render() {
     return (
       <div>
-        <img src = {this.state.url}></img>
-        <div id = 'name'>{this.state.name}</div>
+        <Dog id = '1'></Dog>
+        <Dog id = '2'></Dog>
       </div>
     )
   }
 }
 
-ReactDOM.render(
-  <App id = '1'/>, document.getElementById('similarContainer')
-)
+// ReactDOM.render(
+//   <App id = '1'/>, document.getElementById('similarContainer')
+// )
+
+window.App = App;

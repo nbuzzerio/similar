@@ -3,6 +3,8 @@ const path = require('path');
 module.exports = {
   entry: path.join(__dirname, '/client/src/app.jsx'),
   output: {
+    library: 'similar',
+    libraryTarget: 'umd',
     filename: 'main.js',
     path: path.join(__dirname, '/client/dist'),
   },

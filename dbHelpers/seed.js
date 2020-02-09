@@ -19,9 +19,8 @@ var seedDb = function(callback) {
       if (filesSaved === files.length) {
         if (callback) {
           callback();
-        } else {
-          process.exit(0);
         }
+        db.db.connection.close();
       }
     });
   }
