@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import styled from 'styled-components';
 
 class Dog extends React.Component {
   constructor(props) {

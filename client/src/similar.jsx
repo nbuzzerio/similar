@@ -3,7 +3,7 @@ const ReactDOM = require('react-dom');
 const $ = require('jquery');
 const Dog = require('./components/dog.jsx').default;
 
-class App extends React.Component {
+class Similar extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -22,4 +22,4 @@ class App extends React.Component {
 //   <App id = '1'/>, document.getElementById('similarContainer')
 // )
 
-window.App = App;
+window.Similar = Similar;
