@@ -1,0 +1,13 @@
+Create journal in docs - permissions to rpt.team@galvanize.com
+
+1/29 - finished setup and seed code
+    
+    * uploaded files to s3. downloaded 100 dog pictures one by one from unsplash. Uploaded all at once to s3
+    * created an array of filenames to loop through (that way didn't have to rename to a consistent naming for the files)
+    * add names with s3 bucket location to a db of URLs plus dog names
+        - need to figure out how to pull dog names from Aaron later and update from there. Will be doing an intermittent pull/recalc at some point once algorithm is in place.
+     
+     
+     - finished db mongoose connection and get/save functions
+
+    * add a get router to provide URL for a dog based on breed ID. Should be provided to Aaron for the picture.

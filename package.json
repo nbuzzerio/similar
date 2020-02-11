@@ -1,0 +1,45 @@
+{
+  "name": "similar",
+  "version": "1.0.0",
+  "description": "Similar Breeds Component",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --detectOpenHandles",
+    "start": "nodemon --inspect index.js",
+    "seed": "node ./dbHelpers/seedRunner.js",
+    "compile": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sagittarius-HR/similar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sagittarius-HR/similar/issues"
+  },
+  "homepage": "https://github.com/Sagittarius-HR/similar#readme",
+  "dependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jest": "^25.1.0",
+    "jquery": "^3.4.1",
+    "mongoose": "^5.8.9",
+    "nodemon": "^2.0.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "styled-components": "^5.0.1",
+    "webpack": "^4.41.5"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.10"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
