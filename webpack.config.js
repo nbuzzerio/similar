@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  mode: 'development',
   entry: path.join(__dirname, '/client/src/similar.jsx'),
   output: {
     filename: 'main.js',

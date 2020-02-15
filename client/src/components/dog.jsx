@@ -4,9 +4,33 @@ import $ from 'jquery';
 import styled from 'styled-components';
 
 const StyledImage = styled.img`
-  height: 300px;
-  width: 500px;
-  object-fit: contain;
+  height: 260px;
+  margin-right: 10px;
+  width: 560px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+`;
+
+const StyledImageDiv = styled.div`
+  display: inline-block;
+`;
+
+const StyledNameDiv = styled.div`
+  margin-right: 10px;
+  height: 33px;
+  width: 480px;
+  border-radius: 0 0 10px 10px;
+  background-color: #FFF; 
+  padding: 15px 40px;
+`;
+
+const StyledNameText = styled.h4`
+  text-align: center;
+  color: #6504b5;
+  line-height: 1.2;
+  font-size: 24px;   
+  margin:0;
+  font-weight: 400;
 `;
 
 class Dog extends React.Component {
@@ -34,10 +58,14 @@ class Dog extends React.Component {
 
   render() {
     return (
-      <div>
+      <StyledImageDiv>
         <StyledImage src = {this.state.url}></StyledImage>
-        <div id = 'name'>{this.state.name}</div>
-      </div>
+        <StyledNameDiv>
+          <StyledNameText>
+            {this.state.name}
+          </StyledNameText>
+        </StyledNameDiv>
+      </StyledImageDiv>
     )
   }
 }
