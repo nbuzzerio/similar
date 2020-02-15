@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import styled from 'styled-components';
 
+const StyledImage = styled.img`
+  height: 300px;
+  width: 500px;
+  object-fit: contain;
+`;
+
 class Dog extends React.Component {
   constructor(props) {
     super(props);
@@ -29,7 +35,7 @@ class Dog extends React.Component {
   render() {
     return (
       <div>
-        <img className = 'dogImage' src = {this.state.url}></img>
+        <StyledImage src = {this.state.url}></StyledImage>
         <div id = 'name'>{this.state.name}</div>
       </div>
     )
