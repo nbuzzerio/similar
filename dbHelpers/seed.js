@@ -8,7 +8,7 @@ var seedDb = function(callback) {
   
   for (var i = 0; i < files.length; i++) {
     // need to replace placeholder Doggy ID name with name from Aaron's service
-    db.save(i+1, 'Doggy ' + (i+1),  'https://sagittarius-pups.s3-us-west-1.amazonaws.com/pups/' + files[i], function(err, dog) {
+    db.save(i+1, 'Doggy ' + (i+1),  'https://sagittarius-pups.s3-us-west-1.amazonaws.com/pups-small/' + files[i], function(err, dog) {
       if (err) {
         throw new Error(err);
         process.exit(1);

@@ -29,7 +29,13 @@ app.listen(port, () => {
     responseType: 'json'
   })
     .then(function (response) {
-      debugger;
+      db.saveFromInfo(response.data, function(err, docs) {
+        if (err) {
+          throw new Error(err);
+        } else {
+          db.updateRanks();
+        }
+      });
     });
 });
 

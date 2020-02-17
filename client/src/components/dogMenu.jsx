@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import styled from 'styled-components';
 import Dog from './dog.jsx';
+import MenuArrow from './arrows.jsx';
 
 const StyledMenu = styled.div`
   clear:both;
@@ -11,36 +12,7 @@ const StyledMenu = styled.div`
   margin: 0 auto;
   padding-top: 20px;
   display: inline-block;
-`;
-
-const ArrowContainer = styled.div`
-  border-radius: 50px;
-  height: 44px;
-  width: 44px;
-  background: #FFF;
-  opacity: .6;
-  text-align:center;
-  line-height: 44px;
-  font-size: 50px;
-  font-weight: 900;
-  position: absolute;
-  top: 200px;
-  margin-left: 5px;
-`;
-
-const ArrowContainerRight = styled.div`
-  border-radius: 50px;
-  height: 44px;
-  width: 44px;
-  background: #FFF;
-  opacity: .6;
-  text-align:center;
-  line-height: 44px;
-  font-size: 50px;
-  font-weight: 900;
-  position: absolute;
-  top: 200px;
-  margin-left: 1170px;
+  position: relative;
 `;
 
 const DogContainer = styled.div`
@@ -63,15 +35,11 @@ class DogMenu extends React.Component {
     });
     return (
       <StyledMenu>
-        <ArrowContainer>
-          {'<'}
-        </ArrowContainer>
+        <MenuArrow direction = "left"/>
         <DogContainer>
           {mappedItems}
         </DogContainer>
-        <ArrowContainerRight>
-          {'>'}
-        </ArrowContainerRight>
+        <MenuArrow direction = "right"/>
       </StyledMenu>
     )
   }

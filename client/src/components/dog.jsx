@@ -9,12 +9,10 @@ const StyledImage = styled.img`
   width: 560px;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
+  float:left;
+  position: relative;
+  z-index: 4;
 `;
-
-const StyledImageDiv = styled.div`
-  display: inline-block;
-`;
-
 const StyledNameDiv = styled.div`
   margin-right: 10px;
   height: 33px;
@@ -22,6 +20,8 @@ const StyledNameDiv = styled.div`
   border-radius: 0 0 10px 10px;
   background-color: #FFF; 
   padding: 15px 40px;
+  float: left;
+  clear:left;
 `;
 
 const StyledNameText = styled.h4`
@@ -32,6 +32,19 @@ const StyledNameText = styled.h4`
   margin:0;
   font-weight: 400;
 `;
+
+const StyledImageDiv = styled.div`
+  display: inline-block;
+  &:hover {
+    ${StyledImage} {
+      opacity: .5;
+    }
+    h4 {
+      text-decoration: underline;
+    }
+  }
+`;
+
 
 class Dog extends React.Component {
   constructor(props) {
@@ -59,8 +72,7 @@ class Dog extends React.Component {
   render() {
     return (
       <StyledImageDiv>
-        <StyledImage src = {this.state.url}></StyledImage>
-        <StyledNameDiv>
+        <StyledImage src = {this.state.url}></StyledImage><StyledNameDiv>
           <StyledNameText>
             {this.state.name}
           </StyledNameText>
