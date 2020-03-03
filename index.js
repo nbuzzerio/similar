@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
 const port = 3001;
+const axios = require('axios');
 
 const db = require('./dbHelpers/db.js');
 
@@ -20,4 +21,22 @@ app.get('/url/:dogId', function(req, res) {
   });
 });
 
-app.listen(port, () => console.log('Similar app listening on port ' + port));
+app.listen(port, () => {
+  console.log('Similar app listening on port ' + port);
+  axios({
+    method: 'get',
+    url: 'http://localhost:3002/api/allBreedsSimilar',
+    responseType: 'json'
+  })
+    .then(function (response) {
+      db.saveFromInfo(response.data, function(err, docs) {
+        if (err) {
+          throw new Error(err);
+        } else {
+          db.updateRanks();
+        }
+      });
+    });
+});
+
+// http://localhost:3002/api/allBreedsSimilar

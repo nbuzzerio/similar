@@ -1,12 +1,13 @@
 const path = require('path');
 
 module.exports = {
+  mode: 'development',
   entry: path.join(__dirname, '/client/src/similar.jsx'),
   output: {
-    library: 'similar',
-    libraryTarget: 'umd',
     filename: 'main.js',
     path: path.join(__dirname, '/client/dist'),
+    library: 'similar',
+    libraryTarget: "umd"
   },
   module: {
     rules: [
@@ -23,5 +24,19 @@ module.exports = {
       }
     ]
   },
-  watch:true
+  externals: {
+    react: {          
+      commonjs: "react",          
+      commonjs2: "react",          
+      amd: "React",          
+      root: "React"      
+    },      
+    "react-dom": {          
+        commonjs: "react-dom",          
+        commonjs2: "react-dom",          
+        amd: "ReactDOM",          
+        root: "ReactDOM"      
+    }  
+  },
+  watch:true 
 };
